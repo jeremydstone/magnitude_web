@@ -3,7 +3,7 @@
     --primary: #EB1616;
     --secondary: #191C24;
     --light: #6C7293;
-    --dark: #000000;
+    --dark: #000;
 }
 
 body {
@@ -80,7 +80,7 @@ body {
     margin-right: 30px;
     padding: 40px 0;
     color: var(--light);
-    font-family: 'Oswald', sans-serif;
+    font-family: Oswald, sans-serif;
     font-size: 18px;
     font-weight: 600;
     text-transform: uppercase;
@@ -140,7 +140,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, .5);
+    background: rgb(0 0 0 / 50%);
     z-index: 1;
 }
 
@@ -170,7 +170,7 @@ body {
 }
 
 .page-header {
-    background: linear-gradient(rgba(0, 0, 0, .85), rgba(0, 0, 0, .85)), url(../img/carousel-1.jpg) center center no-repeat;
+    background: linear-gradient(rgb(0 0 0 / 85%), rgb(0 0 0 / 85%)), url("../img/carousel-1.jpg") center center no-repeat;
     background-size: cover;
 }
 
@@ -207,7 +207,7 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, .4);
+    background: rgb(0 0 0 / 40%);
     transition: .5s;
 }
 
@@ -248,7 +248,7 @@ body {
 }
 
 .team-item .team-social .btn:hover {
-    color: #FFFFFF;
+    color: #FFF;
     background: var(--primary);
 }
 
@@ -334,5 +334,5 @@ body {
 
 .text-highlight {
     font-weight: bold;
-    color: #ccccff;
+    color: #ccf;
 }

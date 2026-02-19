@@ -14,7 +14,15 @@ python3 -m http.server 8080
 ```
 Then open http://localhost:8080 in a browser.
 
-There are no build or lint commands — edit files directly.
+Edit files directly — no build step required.
+
+## Linting
+
+```
+npm run lint          # run all linters
+npm run lint:html     # html-validate on index.html
+npm run lint:css      # stylelint on css/style.css
+```
 
 ## Testing
 
