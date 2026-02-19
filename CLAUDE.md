@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Static single-page marketing website for Magnitude10 (Jeremy Stone's fractional CTO / AI consultancy). No build system, no package manager, no server-side code.
+Static single-page marketing website for Magnitude10 (Jeremy Stone's fractional CTO / AI consultancy). No build system, no server-side code.
 
 ## Development
 
@@ -14,7 +14,15 @@ python3 -m http.server 8080
 ```
 Then open http://localhost:8080 in a browser.
 
-There are no build, test, or lint commands — edit files directly.
+There are no build or lint commands — edit files directly.
+
+## Testing
+
+```
+npm test
+```
+
+Tests use Jest with jsdom. Test file: `js/main.test.js`. Covers JavaScript behaviors (spinner, sticky navbar, back-to-top, carousel init) and HTML structure validation.
 
 ## Key Files
 
