@@ -10,7 +10,6 @@ function setupDOM() {
     <div id="spinner" class="show"></div>
     <nav class="sticky-top" style="top: -100px;"></nav>
     <a href="#" class="back-to-top" style="display: none;"></a>
-    <div class="testimonial-carousel"></div>
   `;
 }
 
@@ -26,9 +25,6 @@ function loadMain() {
   global.WOW = jest.fn().mockImplementation(() => ({
     init: jest.fn(),
   }));
-
-  // Mock owlCarousel jQuery plugin
-  $.fn.owlCarousel = jest.fn();
 
   // Mock easing (jQuery easing plugin adds easeInOutExpo)
   $.easing.easeInOutExpo = function (x) {
@@ -143,20 +139,6 @@ describe("Back to top button", () => {
     expect(calls[0][2]).toBe("easeInOutExpo");
 
     $.fn.animate = origAnimate;
-  });
-});
-
-describe("Testimonials carousel", () => {
-  test("initializes owlCarousel with correct options", () => {
-    expect($.fn.owlCarousel).toHaveBeenCalledWith({
-      autoplay: true,
-      smartSpeed: 1000,
-      loop: true,
-      nav: false,
-      dots: true,
-      items: 1,
-      dotsData: true,
-    });
   });
 });
 
