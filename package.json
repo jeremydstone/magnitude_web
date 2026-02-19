@@ -7,7 +7,10 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "npm run lint:html && npm run lint:css",
+    "lint:html": "html-validate index.html",
+    "lint:css": "stylelint css/style.css"
   },
   "repository": {
     "type": "git",
@@ -22,8 +25,11 @@
   },
   "homepage": "https://github.com/jeremydstone/magnitude_web#readme",
   "devDependencies": {
+    "html-validate": "^10.8.0",
     "jest": "^30.2.0",
     "jest-environment-jsdom": "^30.2.0",
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "stylelint": "^17.3.0",
+    "stylelint-config-standard": "^40.0.0"
   }
 }
