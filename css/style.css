@@ -336,3 +336,18 @@ body {
     font-weight: bold;
     color: #ccf;
 }
+
+@media (max-width: 767.98px) {
+    .team-img {
+        min-height: 0 !important;
+        aspect-ratio: 1;
+    }
+
+    .team-item .bg-secondary {
+        height: auto !important;
+    }
+
+    .team-item {
+        height: 100%;
+    }
+}
