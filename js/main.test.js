@@ -170,7 +170,25 @@ describe("HTML structure", () => {
 
   test("has the correct page title", () => {
     const title = document.querySelector("title");
-    expect(title.textContent).toBe("Magnitude10");
+    expect(title.textContent).toBe("Magnitude 10 | Fractional CTO & AI Services");
+  });
+
+  test("has a non-empty meta description", () => {
+    const desc = document.querySelector('meta[name="description"]');
+    expect(desc).not.toBeNull();
+    expect(desc.getAttribute("content").length).toBeGreaterThan(0);
+  });
+
+  test("has JSON-LD structured data", () => {
+    const script = document.querySelector('script[type="application/ld+json"]');
+    expect(script).not.toBeNull();
+    const data = JSON.parse(script.textContent);
+    expect(data["@type"]).toBe("ProfessionalService");
+  });
+
+  test("has exactly one h1 element", () => {
+    const h1s = document.querySelectorAll("h1");
+    expect(h1s.length).toBe(1);
   });
 
   test("has all portfolio items", () => {

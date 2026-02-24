@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://magnitude10.com/sitemap.xml
